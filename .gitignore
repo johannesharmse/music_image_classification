@@ -105,3 +105,10 @@ venv.bak/
 
 # mp3 files
 additional/data/*/mp3_files/*
+
+# unnecessary image files
+additional/data/*/img/jpg/*
+additional/data/*/img/png/*
+
+# graph data
+graph/*
