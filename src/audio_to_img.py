@@ -11,10 +11,10 @@ import random
 
 count = 0
 
-img_folder = "../additional/data/"
+img_folder = "../additional/data"
 genres = ["hip_hop", "electro"]
 
-sample_duration = 30*1000 # 30 secs
+sample_duration = 10*1000 # 10 secs
 
 if not os.path.exists(join(img_folder, "train/")):
     os.makedirs(join(img_folder, "train/"))
@@ -46,8 +46,9 @@ for genre in genres:
 
             plt.figure()
             plt.plot(sample)
+            plt.ylim([-17000, 17000])
 
-            test_pic = np.random.choice([True, False], p=[0.3, 0.7])
+            test_pic = np.random.choice([True, False], p=[0.2, 0.8])
 
             if test_pic:
                 plt.savefig(join(img_folder, "test", re.sub(r'\W+', '', f) + str(segment//1000) + '.jpg'))
