@@ -47,10 +47,10 @@ for genre in genres:
             plt.figure()
             plt.plot(sample)
 
-            test_pic = np.random.choice([True, False], p=[0.2, 0.8])
+            test_pic = np.random.choice([True, False], p=[0.3, 0.7])
 
-            if test_pic is True:
-                plt.savefig(join(img_folder, "test", re.sub(r'\W+', '', f) + '.jpg'))
+            if test_pic:
+                plt.savefig(join(img_folder, "test", re.sub(r'\W+', '', f) + str(segment//1000) + '.jpg'))
             else:
                 plt.savefig(join(img_folder, "train", genre, re.sub(r'\W+', '', f) + str(segment//1000) + '.jpg'))
 
