@@ -14,7 +14,7 @@ count = 0
 img_folder = "../additional/data"
 genres = ["hip_hop", "electro"]
 
-sample_duration = 60*1000 # 60 secs
+sample_duration = 4*1000 # 4 secs
 
 if not os.path.exists(join(img_folder, "train/")):
     os.makedirs(join(img_folder, "train/"))
